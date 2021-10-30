@@ -1,0 +1,281 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+}
+
+h1{
+font-size: 50px;
+}
+h2{
+text-align: center;
+}
+h3{
+color:#ea883d;
+}
+p, li{
+color: black;
+margin: 12px 0;
+}
+
+main{
+background-color: #e6e6e6;
+}
+
+.padre{
+display: flex;
+flex-flow: column nowrap;
+}
+/* empieza estilo del header */
+.header{
+background-color:#2596be;
+color: white;
+padding: 20px;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+
+}
+.marca{
+font-family: 'Open Sans', sans-serif; 
+}
+
+.navegacion{
+display: flex;
+flex-flow: row nowrap;
+}
+
+.button{
+color: #162538;
+opacity: .75;
+text-decoration: none;
+padding: 10px;
+font-size: 20px;
+}
+
+.buttonOn{
+color: white;              
+text-decoration: none;
+padding: 10px;
+font-size: 20px;
+}
+/* termina estilo del header */
+
+/* empieza estilo del footer */
+.footer{
+background-color:#2596be;
+color: white;
+padding: 20px;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+}
+
+.redesSociales{
+text-decoration: none;
+}
+
+.fab{
+background-color: white;
+color: #2596be;
+margin: 0 10px 0 0;
+padding: 6px;
+border-radius: 15px;
+text-decoration: none;
+width: 30px;
+height: 30px;
+text-align: center;
+}
+.fa{
+background-color: white;
+color: #2596be;
+margin: 0 10px 0 0;
+padding: 6px;
+border-radius: 15px;
+text-decoration: none;
+width: 30px;
+height: 30px;
+text-align: center;
+}
+.buttonTop{
+background: linear-gradient(180deg, #bba8be 0%, #8a7884 100%);
+color: black;
+text-decoration:none; 
+padding: 10px;
+border-radius: 15px;
+}
+
+.pie{
+display: flex;
+flex-flow: row wrap;
+}
+/* termina estilo del footer */   
+
+/* empieza estilo del main de la página index */
+.animado {
+height: 70vh;
+background-position: center;
+background-size: cover;
+opacity: .75;
+animation-name: cambiarImagen;
+animation-duration: 25s;
+animation-iteration-count: infinite;
+}
+/* en un futuro se cambiará la animacion por un carrusel */
+@keyframes cambiarImagen {
+0% {background-image: url("../Imagenes/10140.jpg");}
+33% {background-image: url("../Imagenes/op1.jpg");}
+66% {background-image: url("../Imagenes/op2.jpg");}
+100% {background-image: url("../Imagenes/10140.jpg");}
+}
+
+.seccion2{
+padding: 20px;
+display: flex;
+flex-flow: row wrap;
+text-align: center;
+align-items: center;
+}
+.lista{
+flex: 1 1 35%;
+}
+.info{
+flex: 1 1 65%;
+}
+/* termina estilo del main de la página index */
+
+/* empieza estilo del main de la página portfolio */
+.container{
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+overflow: hidden;
+padding:20px 0;
+height: auto;
+}
+
+.container-cards{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.card{
+width: 30%;
+padding: 30px 0;
+background: linear-gradient(180deg, #2596be 0%, #0f3d4e 100%);
+border-radius: 10px;
+position: relative;
+text-align: center;
+margin-bottom: 50px;
+box-shadow: 0 0 16px #00000033;
+}
+
+.card__img{
+width: 90%;
+height: 200px;
+border-radius: 10px ;
+}
+
+.cards__text{
+text-align: left;
+width: 90%;
+margin:0 auto;
+}
+
+.card__list{
+font-weight: 700;
+margin: 25px 0 12px ;
+font-size: 2em;
+}
+
+.card__copy{
+color: white;
+margin-bottom: 16px;
+}
+/* termina estilo del main de la página portfolio */
+
+/* empieza estilo del main de la página contact */
+.seccion4{
+padding: 20px;
+display: flex;
+flex-flow: row nowrap;
+text-align: center;
+align-items: center;
+}
+.contactos{
+flex: 1 1 65%;
+padding: 0 2%;
+}
+.form_wrap{
+flex: 1 1 35%;
+padding: 0 2%;
+}
+/* alerta del formulario */
+.warnings{          
+width: 200px;
+text-align: center;
+margin: auto;
+color: red;
+padding-top: 20px;
+}
+/* termina estilo del main de la página contact */
+
+/* Medium devices landscape tablets 768px and up */
+@media all and (max-width: 768px){
+.seccion2{
+flex-direction: column;
+}
+.seccion4{
+display:block;
+}
+.footer{
+flex-direction: column;
+align-items: center;
+}
+.social{
+margin-bottom: 20px;
+}
+
+.pie{
+margin-top: 20px;
+}
+.container-cards{
+justify-content:space-around;
+}
+.card{
+width: 45%;
+}
+}
+/* Small devices phones 600px and down */
+@media only screen and (max-width: 600px){
+.header{
+flex-direction: column;
+align-items: center;
+}
+.card{
+width: 90%;
+}
+}
+/* Extra small devices phones 400px and down */
+@media only screen and (max-width: 400px){
+.navegacion{
+flex-direction: column;
+align-items: center;
+}
+.pie{
+flex-direction: column;
+align-items: center;
+}
+.guion{
+display: none;
+}
+}
